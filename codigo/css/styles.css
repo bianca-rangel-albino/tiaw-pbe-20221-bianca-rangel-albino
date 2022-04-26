@@ -3,8 +3,8 @@
 :root {
     --texto: #000000;
     --texto-link: #c8c8c8;
-    --fundo: #8E8E8E;
-    --fundo-card: #FFF;
+    --fundo: #8e8e8e;
+    --fundo-card: #fff;
     --fundo-botao: #333333;
 }
 
@@ -13,9 +13,15 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     text-decoration: none;
     list-style: none;
+    outline: none;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -43,9 +49,9 @@ a {
 header {
     background: var(--fundo-botao);
     width: 35%;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: 0;
-    
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -54,7 +60,7 @@ header {
     border-bottom-left-radius: 10px;
 }
 
-header a{
+header a {
     margin-left: 50px;
 }
 
@@ -72,14 +78,46 @@ header a{
     padding: 10px;
 }
 
+/* Footer */
+
+#footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#footer img {
+    width: 60px;
+    height: 40px;
+}
+
+#social-icons a {
+    padding-left: 25px;
+}
+
 /*Tela login */
+
+#login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .boxdelogin {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 49px;
-    height: 520px;
+    height: 640px;
 }
 
 .cardlogin {
@@ -87,40 +125,65 @@ header a{
     border-radius: 15px;
     padding: 50px;
     text-align: center;
-    
 }
-.loginHeader{
+
+.loginHeader {
     text-align: left;
     padding-bottom: 25px;
 }
 
-.loginFooter{
+.loginFooter {
     padding-top: 10px;
 }
 
-#usuario {
-    border: 1px solid var(--fundo-botao);
-    border-radius: 10px;
-}
-
-#senha {
-    border: 1px solid var(--fundo-botao);
-    border-radius: 10px;
-}
-
-.usuario{
+.user-email{
     padding-bottom: 25px;
 }
 
-.botaoEntrar{
+.label-input {
+    padding: 10px 10px 10px 0px;
+}
+
+
+.label-input input {
+    border: 1px solid var(--fundo-botao);
+    border-radius: 10px;
+    padding-left: 15px;
+}
+
+
+
+#loginButton {
     background-color: var(--fundo-botao);
     color: var(--fundo-card);
     text-align: center;
     padding: 12px;
     cursor: pointer;
     border-radius: 10px;
-    margin-top: 15px;
+    margin-top: 25px;
     width: 80%;
     border: none;
+}
+
+
+/* Tela de cadastro */
+
+#cadastro-container {
+    height: 100vh;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+
+#newUserButton {
+    background-color: var(--fundo-botao);
+    color: var(--fundo-card);
+    text-align: center;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 35px;
+    width: 80%;
+    border: none;
 }

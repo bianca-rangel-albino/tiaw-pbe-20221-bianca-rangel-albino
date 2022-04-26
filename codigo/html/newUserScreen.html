@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/c99837219b.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+    <title>TF Cadastro</title>
+</head>
+<body>
+    
+  <div id="login-container">
+    <div class="boxdelogin">
+      <div class="cardlogin">
+        
+        <div class="loginHeader">
+          <h1>Crie sua conta</h1>
+        </div>
+        
+        <div class="label-input">
+            <input type="text" id="new-user-name" placeholder="Nome" />
+            <label id="label-new-user-name"></label>
+        </div>
+
+        <div class="label-input">
+          <input type="email" id="new-user-email"  pattern=".+@globex\.com" size="30" required placeholder="Email" />
+          <label id="label-new-user-email"> </label>
+        </div>
+        
+        <div class="label-input">
+          <input type="password" id="new-user-password" placeholder="Senha" />
+          <label id="label-new-user-password"></label>
+        </div>
+
+        <div class="label-input">
+            <input type="password" id="new-user-confirm-password" placeholder="Confirme sua senha" />
+            <label id="label-new-user-confirm-password"></label>
+        </div>
+        
+        <div id="error-message">
+            
+        </div> 
+
+        <div>
+          <button id="newUserButton" onClick="cadastro()">Criar conta</button>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="../js/handleCreateUser.js"></script>
+</body>
+</html>
