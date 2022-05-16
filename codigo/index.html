@@ -1,41 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/c99837219b.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/c99837219b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="../css/styles.css" rel="stylesheet" type="text/css" />
     <title>TechFood</title>
-</head>
+  </head>
 
+  <body>
+    <!-- Header -->
 
-
-<body>
     <header id="header">
-        <a href="/"><i class="fa-solid fa-house"></i></a>
-        <nav>
-          <ul class="menu">
-            <li><a href="/">Sobre</a></li>
-            <li><a href="/">produtos</a></li>
-            <li><a href="/">Contato</a></li>
-          </ul>
-        </nav>
-
-
+      <a href="/"><i class="fa-solid fa-house"></i></a>
+      <nav>
+        <ul class="menu">
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Encontrar receitas</a></li>
+          <li><a href="#">Minhas receitas</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section>
-      <a href="html/loginScreen.html">login</a>
+    <!--Tela principal-->
+
+    <section id="hero">
+      <img id="hero-logo" src="/assets/img/logo.png" />
+
+      <div id="hero-content">
+        <h1 id="hero-title">TechFood.</h1>
+        <h3 id="hero-subtitle">O melhor lugar para encontrar a sua receita</h3>
+
+        <button
+          type="button"
+          id="hero-button"
+          onclick="location.href='/html/telaDeLogin.html'"
+        >
+          Buscar receita &raquo;
+        </button>
+      </div>
     </section>
 
-    <section>
-
-    </section>
+    <!--Footer-->
 
     <footer id="footer">
       <div id="social-icons">
@@ -46,17 +62,14 @@
           <i class="fa-brands fa-facebook fa-2xl"></i>
         </a>
       </div>
-      
+
       <div id="copyright">
-          <p>Copyright &copy; 2022 todos os direitos reservados</p> 
+        <p>Copyright &copy; 2022 todos os direitos reservados</p>
       </div>
-      
+
       <div id="footer-logo">
-        <img src="assets/img/logo.jpg">
+        <img src="/assets/img/logo.png" />
       </div>
     </footer>
-</body>
-
-
-
+  </body>
 </html>
