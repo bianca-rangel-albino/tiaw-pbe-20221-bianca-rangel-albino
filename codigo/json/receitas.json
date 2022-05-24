@@ -1,0 +1,51 @@
+[        
+    {
+        "id": "1",
+        "receita":"Brigadeiro de colher",
+        "resumo": "Um delicioso brigadeiro, que utiliza apenas leite condensado, creme de leite, chocolate em pó",
+        "ingredientes": ["4 colheres de chocolate 50% cacau ou 3 colheres de achocoloatado",
+                        "1 caixa de leite condensado",
+                        "1/2 caixinha de creme de leite"],
+        "modo_de_preparo": ["Em uma panela misture todos os ingredientes",
+                            "Depois de misturado ligue o fogo e fique mexendo para nao queimar",
+                            "Quando o brigadeiro começar a desgrudar da panela, desligue o fogo",
+                            "Pronto!! coloque em um prato e deixe esfriar"],
+        "tempo_de_preparo": "15 minutos",
+        "porcoes": "Serve ate 8 pessoas"
+
+    },
+
+    {
+        "id": "2",
+
+        "receita":"Brigadeiro de colher",
+         "resumo": "Um delicioso brigadeiro, que utiliza apenas leite condensado, creme de leite, chocolate em pó",
+         "ingredientes": ["4 colheres de chocolate 50% cacau ou 3 colheres de achocoloatado",
+                          "1 caixa de leite condensado",
+                          "1/2 caixinha de creme de leite"],
+         "modo_de_preparo": ["Em uma panela misture todos os ingredientes",
+                              "Depois de misturado ligue o fogo e fique mexendo para nao queimar",
+                              "Quando o brigadeiro começar a desgrudar da panela, desligue o fogo",
+                              "Pronto!! coloque em um prato e deixe esfriar"],
+          "tempo_de_preparo": "15 minutos",
+          "porcoes": "Serve ate 8 pessoas"
+
+    },
+
+    {
+        "id": "3",
+
+        "receita":"Brigadeiro de colher",
+         "resumo": "Um delicioso brigadeiro, que utiliza apenas leite condensado, creme de leite, chocolate em pó",
+         "ingredientes": ["4 colheres de chocolate 50% cacau ou 3 colheres de achocoloatado",
+                          "1 caixa de leite condensado",
+                          "1/2 caixinha de creme de leite"],
+         "modo_de_preparo": ["Em uma panela misture todos os ingredientes",
+                              "Depois de misturado ligue o fogo e fique mexendo para nao queimar",
+                              "Quando o brigadeiro começar a desgrudar da panela, desligue o fogo",
+                              "Pronto!! coloque em um prato e deixe esfriar"],
+          "tempo_de_preparo": "15 Min",
+          "porcoes": "8 pessoas"
+
+}
+]
