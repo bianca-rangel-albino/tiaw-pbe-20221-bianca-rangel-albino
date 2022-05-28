@@ -1,12 +1,11 @@
-
 /* Cores */
 
 :root {
   --texto: #000000;
-  --texto-link: #c8c8c8;
+  --texto-link: #524439;
   --fundo: #cd7613;
-  --fundo-card: #fff;
-  --fundo-botao: #333333;
+  --fundo-card: #ffeace;
+  --fundo-botao: #524439;
 }
 
 /* Estilos gerais*/
@@ -29,7 +28,6 @@ html {
 body {
   background-color: var(--fundo);
   color: var(--texto);
-  
 }
 
 input {
@@ -48,16 +46,21 @@ a {
 header {
   background: var(--fundo-botao);
   width: 40%;
+  margin-top: 0;
   margin-left: auto;
   margin-right: 0;
   height: 65px;
-
+  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 
   border-bottom-left-radius: 10px;
+}
+
+header a{
+  color: #fff7ed;
 }
 
 .menu {
@@ -71,6 +74,7 @@ header {
 .menu li a {
   display: block;
   padding: 0 15px;
+  color: #fff7ed;
 }
 
 /* Footer */
@@ -80,7 +84,7 @@ header {
   position: fixed;
   width: 100%;
   text-align: center;
-  background-color: #efefef;
+  background-color: #fff7ed;
   text-align: center;
 
   display: flex;
@@ -117,7 +121,7 @@ header {
 #hero-content {
   position: relative;
   color: var(--fundo-card);
-  text-align: justify;
+  text-align: center;
   margin: 0.625rem;
 }
 
@@ -226,9 +230,22 @@ header {
 
 /* minhasreceitas */
 
-body {
-  color: #070707;
-  font-family: 'Roboto', sans-serif;
+#receitas-title {
+  font-size: 2rem;
+  width: 80vh;
+  max-width: 30%;
+  margin: auto;
+}
+
+#filter {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 10px;
+}
+
+#receitas-container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -238,116 +255,77 @@ body {
   padding-bottom: 100px;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-* {
-    box-sizing: border-box;
+.card-receita{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 25px 0;
+  width: 80vw;
+  max-width: 800px;
+  background-color: var(--fundo-card);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 
-h1 {
-    margin-bottom: 0;
-    text-align: center;
-    color: #bab9c6;
+.box-receita {
+  display: flex;
+  justify-content: space-between;
 }
 
-.filter-container {
-    margin-top: 20px;
-    width: 80vw;
-    max-width: 800px;
+.box-receita p {
+  margin-top: 15px;
 }
 
-.filter {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    border: 0;
-    border-radius: 10px;
+.box-receita ul li i {
+  padding-right: 1em;
 }
 
-.post {
-    position: relative;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-    padding: 30px;
-    margin: 40px 0;
-    display: flex;
-    width: 80vw;
-    max-width: 800px;
-}
-
-.post .post-title {
-    margin: 0;
-}
-
-.post .post-body {
-    margin: 20px 0 0;
-    line-height: 1.5;
-}
-
-.post .post-info {
-    margin-left: 20px;
-}
-
-.post .number {
-    position: absolute;
-    top: -15px;
-    left: -15px;
-    font-size: 15px;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #dac152;
-    color: #0E1220;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 7px 10px;
+.link-receita-expandida {
+  color: var(--texto-link);
 }
 
 .loader {
-    opacity: 0;
-    display: flex;
-    position: fixed;
-    bottom: 50px;
-    transition: opacity 0.3s ease-in;
+  opacity: 0;
+  display: flex;
+  position: fixed;
+  bottom: 50px;
+  transition: opacity 0.3s ease-in;
 }
 
 .loader.show {
-    opacity: 1;
+  opacity: 1;
 }
 
 .circle {
-    background-color: #4CD964;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin: 5px;
-    animation: bounce 0.5s ease-in infinite;
+  background-color: #0e1220;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  animation: bounce 0.5s ease-in infinite;
 }
 
 .circle:nth-of-type(2) {
-    animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
 
 .circle:nth-of-type(3) {
-    animation-delay: 0.2s;
+  animation-delay: 0.2s;
 }
 
-.mostrarMais{
+.mostrarMais {
   position: absolute;
   border: none;
   margin-top: 5px;
   color: #333333;
-
 }
 
-
 @keyframes bounce {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
