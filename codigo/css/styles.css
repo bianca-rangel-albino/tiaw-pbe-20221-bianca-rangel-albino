@@ -329,3 +329,42 @@ header a{
     transform: translateY(-10px);
   }
 }
+/*tela-sobre*/
+#sobre-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-bottom: 100px;
+
+  
+}
+#title-sobre{
+  text-align: left;
+  font-size: 4rem;
+  width: 80vh;
+  max-width: 30%;
+  
+
+}
+#card-sobre {
+  background-color:  #ffeace;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 110px;
+  margin: 70px;
+  text-align: center;
+}
+#texto-sobre { 
+ 
+	font-size: 20px;
+
+	
+	padding: 20px 15px;
+  text-align:justify;
+
+}
+
+
