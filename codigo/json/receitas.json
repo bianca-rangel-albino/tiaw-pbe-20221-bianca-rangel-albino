@@ -21,6 +21,7 @@
             ],
             "tempo_de_preparo": "30 min",
             "porcoes": "4"
+            
         },
         {
             "id": 2,
@@ -203,6 +204,7 @@
     ],
     "receitas_doces": [
         {
+            "id": 1,
             "receita": "Brigadeiro de colher",
             "resumo": "Um delicioso brigadeiro, que utiliza apenas leite condensado, creme de leite, chocolate em pó",
             "ingredientes": [
@@ -220,6 +222,7 @@
             "porcoes": "8"
         },
         {
+            "id": 2,
             "receita": "Mousse de limão",
             "resumo": "Rceita de mousse bem refrescante, que utiliza apenas leite condensado, limão, creme de leite",
             "ingredientes": [
@@ -237,6 +240,7 @@
             "porcoes": "6"
         },
         {
+            "id": 3,
             "receita": "Brownie de microondas",
             "resumo": "Um delicioso brownie, feito no microondas de forma rapida, que você nunca viu!",
             "ingredientes": [
