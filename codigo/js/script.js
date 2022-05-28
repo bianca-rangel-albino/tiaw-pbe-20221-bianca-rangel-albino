@@ -1,4 +1,4 @@
-const postsContainer = document.querySelector("#posts-container")
+const postsContainer = document.querySelector("#receitas-container")
 const loadercontainer = document.querySelector(".loader")
 const filterInput = document.querySelector('#filter')
 
@@ -6,17 +6,15 @@ let page = 1
 
 
 const getRecipe = async() => {
-    const response = await fetch('https://api.jsonbin.io/b/628c181f402a5b38020a6958')
+    const response = await fetch('https://api.jsonbin.io/b/6292583b402a5b3802120ace')
     const data = await response.json()
     return data;
 }
 
-
-
 const generateRecipetemplate = recipe => recipe.map(item => `
     <div class="post">
         <div class="card-receita">
-            <h3>${item.receita}</h3>
+            <h3>${item.nome}</h3>
             <div class="box-receita">
                 <p>${item.resumo}</p>
                 <ul>
@@ -67,28 +65,5 @@ const handleScrollToPageBottom = () => {
 }
 
 window.addEventListener('scroll', handleScrollToPageBottom)
-
-const showPostIfMatchInputValue = inputValue => (post) => {
-    const postTitle = post.querySelector('.post-title').textContent.toLowerCase()
-    const postBody = post.querySelector('.post-body').textContent.toLowerCase()
-    const postContainsInputValue = postTitle.includes(inputValue) ||
-        postBody.includes(inputValue)
-
-    if (postContainsInputValue) {
-        post.style.display = 'flex';
-        return;
-    }
-    post.style.display = 'none';
-
-}
-
-const handleInputValue = (event) => {
-    const inputValue = event.target.value
-    const posts = document.querySelectorAll('.post')
-    posts.forEach(showPostIfMatchInputValue(inputValue))
-}
-
-
-filterInput.addEventListener('input', handleInputValue)
 
 getRecipe()
