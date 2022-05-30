@@ -5,17 +5,18 @@ let recipes = [];
 
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
+    console.log(searchString)
     const filteredCharacters = recipes.filter((recipe) => {
-        return recipe?.nome
+        console.log(recipe.nome)
+        return recipe.nome.toLowerCase().includes(searchString) 
     });
     displayRecipe(filteredCharacters);
 });
 
 const getRecipe = async() => {
-    const response = await fetch('https://api.jsonbin.io/b/6292583b402a5b3802120ace')
+    const response = await fetch('https://api.jsonbin.io/b/62942622402a5b380213e76d')
     recipes = await response.json()
     displayRecipe(recipes);
-    console.log(recipes)
 }
 
 const displayRecipe = ( recipes ) => {
@@ -40,7 +41,7 @@ const displayRecipe = ( recipes ) => {
             </div>
             `
         }).join("")
-    receitasContainer.innerHTML =  recipeBox;
+    receitasContainer.innerHTML = recipeBox;
 }
     
 getRecipe()
