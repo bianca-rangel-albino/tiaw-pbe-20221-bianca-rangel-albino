@@ -1,69 +1,47 @@
-const postsContainer = document.querySelector("#receitas-container")
+const receitasContainer = document.querySelector("#receitas-container")
 const loadercontainer = document.querySelector(".loader")
-const filterInput = document.querySelector('#filter')
+const searchBar = document.getElementById("searchBar")
+let recipes = [];
 
-let page = 1
-
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+    console.log(searchString)
+    const filteredCharacters = recipes.filter((recipe) => {
+        console.log(recipe.nome)
+        return recipe.nome.toLowerCase().includes(searchString) 
+    });
+    displayRecipe(filteredCharacters);
+});
 
 const getRecipe = async() => {
-    const response = await fetch('https://api.jsonbin.io/b/6292583b402a5b3802120ace')
-    const data = await response.json()
-    return data;
+    const response = await fetch('https://api.jsonbin.io/b/62942622402a5b380213e76d')
+    recipes = await response.json()
+    displayRecipe(recipes);
 }
 
-const generateRecipetemplate = recipe => recipe.map(item => `
-    <div class="post">
-        <div class="card-receita">
-            <h3>${item.nome}</h3>
-            <div class="box-receita">
-                <p>${item.resumo}</p>
-                <ul>
-                    <li><i class="fa-solid fa-house-chimney"></i>${item.tempo_de_preparo}</li>
-                    <li><i class="fa-solid fa-user"></i>${item.porcoes}</li>
-                    <li><i class="fa-solid fa-heart"></i>Favorito</li>
-                </ul>
+const displayRecipe = ( recipes ) => {
+    const recipeBox = recipes
+        .map((recipe) => {
+            return `
+            <div class="post">
+                <div class="card-receita">
+                    <h3>${recipe.nome}</h3>
+                    <div class="box-receita">
+                        <p>${recipe.resumo}</p>
+                        <ul>
+                            <li><i class="fa-solid fa-house-chimney"></i>${recipe.tempo_de_preparo}</li>
+                            <li><i class="fa-solid fa-user"></i>${recipe.porcoes}</li>
+                            <li><i class="fa-solid fa-heart"></i>Favorito</li>
+                        </ul>
+                    </div>
+                    <div class="link">
+                        <a href=""><i class="fa-solid fa-angle-right"></i> Mão na massa</a>
+                    </div>
+                </div>
             </div>
-            <div class="link">
-                <a href=""><i class="fa-solid fa-angle-right"></i> Mão na massa</a>
-            </div>
-        </div>
-    </div>
-    `).join("")
-
-const addPostsInToDOM = async() => {
-    const recipes = await getRecipe()
-    console.log(recipes)
-    const recipesTemplate = generateRecipetemplate(recipes)
-    postsContainer.innerHTML += recipesTemplate
+            `
+        }).join("")
+    receitasContainer.innerHTML = recipeBox;
 }
-
-addPostsInToDOM()
-const getNextsPosts = () => {
-    setTimeout(() => {
-        page++;
-        addPostsInToDOM();
-    }, 300);
-
-}
-const removeLoader = () => {
-    setTimeout(() => {
-        loadercontainer.classList.remove("show")
-        getNextsPosts();
-    }, 1000)
-}
-const showLoader = () => {
-    loadercontainer.classList.add("show")
-    removeLoader();
-}
-
-const handleScrollToPageBottom = () => {
-    const { clientHeight, scrollHeight, scrollTop } = document.documentElement
-    const isPageBottomAlmostReached = scrollTop + clientHeight >= scrollHeight - 10
-    if (isPageBottomAlmostReached) {
-        showLoader();
-    }
-}
-
-window.addEventListener('scroll', handleScrollToPageBottom)
-
+    
 getRecipe()
