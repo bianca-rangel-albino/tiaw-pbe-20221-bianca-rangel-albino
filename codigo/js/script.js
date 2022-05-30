@@ -1,20 +1,24 @@
 const receitasContainer = document.querySelector("#receitas-container")
 const loadercontainer = document.querySelector(".loader")
 const searchBar = document.getElementById("searchBar")
+let recipes = [];
 
-searchBar.addEventListener('input', (e) =>{
-    console.log(e.target.value)
-})
+searchBar.addEventListener('keyup', (e) => {
+    const searchString = e.target.value.toLowerCase();
+    const filteredCharacters = recipes.filter((recipe) => {
+        return recipe?.nome
+    });
+    displayRecipe(filteredCharacters);
+});
 
 const getRecipe = async() => {
     const response = await fetch('https://api.jsonbin.io/b/6292583b402a5b3802120ace')
-    const data = await response.json()
-    displayRecipe(data);
-    return data;
+    recipes = await response.json()
+    displayRecipe(recipes);
+    console.log(recipes)
 }
 
 const displayRecipe = ( recipes ) => {
-    console.log(recipes)
     const recipeBox = recipes
         .map((recipe) => {
             return `
@@ -36,7 +40,7 @@ const displayRecipe = ( recipes ) => {
             </div>
             `
         }).join("")
-    receitasContainer.innerHTML +=  recipeBox;
+    receitasContainer.innerHTML =  recipeBox;
 }
     
 getRecipe()
