@@ -378,10 +378,10 @@ header a{
 
 .modal {
   width: 60%;
-  background-color: #cd7613;
+  background-color: var(--fundo-card);
   border: 1px solid #000;
   border-radius: 5px;
-  margin: 7% auto 0 auto;
+  margin: 50px auto 0 auto;
   overflow: hidden;
 }
 
@@ -423,4 +423,9 @@ header a{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.modal-ingredientes-container img{
+  width: 50%;
+  height: 400px;
 }

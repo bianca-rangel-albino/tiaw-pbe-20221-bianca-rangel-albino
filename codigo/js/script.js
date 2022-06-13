@@ -5,7 +5,6 @@ const modal = document.getElementById('modal');
 const modalContent = document.querySelector('.modal-item');
 
 let recipes = [];
-let recipe = 0;
 
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
@@ -16,7 +15,7 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 const getRecipe = async() => {
-    const response = await fetch('https://api.jsonbin.io/b/62942622402a5b380213e76d');
+    const response = await fetch('https://api.jsonbin.io/b/62a73d8b449a1f382106f650');
     recipes = await response.json();
     displayRecipe(recipes);
 }
@@ -47,14 +46,9 @@ const displayRecipe = ( recipes) => {
     receitasContainer.innerHTML = recipeBox; 
 }
     
+getRecipe();
 function abrirModal(index) {
     modal.style.top = "0";
-    
-    function adicionarIngredientes(ingrediente) {
-        let li = document.createElement('li');
-        li.textContent = ingrediente;
-        return li;
-    }
 
     const ingredientes = () => {
         return recipes[index].ingredientes.map(ingrediente => { 
@@ -62,6 +56,11 @@ function abrirModal(index) {
         }).join("");
     }
 
+    const preparo = () => {
+        return recipes[index].modo_de_preparo.map(passo => { 
+            return `<li>${passo}</li>`;
+        }).join("");
+    }
 
     const recipeModal = 
             `
@@ -76,10 +75,10 @@ function abrirModal(index) {
                                         ${ingredientes()}
                                     </ul>
                                 </div>
-                                <img src="https://picsum.photos/300/200">
-                            </div>
+                                    <img src=${recipes[index].imagem}>
+                                </div>
                             <h4>Modo de preparo: </h4>
-                            <p>${recipes[index].modo_de_preparo}</p>
+                            <p>${preparo()}</p>
                         </div>
                     </div>
                 </div>
@@ -90,5 +89,3 @@ function abrirModal(index) {
 function closeModal() {
     modal.style.top = "-100%";
 }
-
-getRecipe();
