@@ -211,7 +211,7 @@
     },
     {
         "id": 10,
-        "receita": "Crepioca de queijo com tomate e orégano",
+        "nome": "Crepioca de queijo com tomate e orégano",
         "resumo":"A crepioca é uma pedida bem simples – ovo e tapioca misturados e depois preparados em uma frigideira. Essa é uma ótima pedida para o café da manhã ou até mesmo para um lanche rápido, mas capaz de matar a fome.",
         "ingredientes":[
             "1 ovo",
@@ -237,7 +237,7 @@
     },
     {
         "id": 11,
-        "receita": "Macarrão de Panela de Pressão Cremoso",
+        "nome": "Macarrão de Panela de Pressão Cremoso",
         "resumo":"Aprenda a fazer o famoso macarrão de panela de pressão cremoso, uma receita prática, super fácil de fazer, ideal para quem não quer perder muito tempo na cozinha e adora macarrão",
         "ingredientes":[
             "Macarrão - 1 pacote de Penne ou Parafuso",
@@ -271,7 +271,7 @@
     },
     {
         "id": 12,
-        "receita": "Pão integral de microondas",
+        "nome": "Pão integral de microondas",
         "resumo":"Essa é uma receita que, além de rápida, é de um pão integral. Você só precisa misturar ovos, farelo de aveia, iogurte e fermento e levar a combinação ao micro-ondas por apenas 2 minutos e seu pão estará prontinho para ser saboreado.",
         "ingredientes":[
             "1 ovo (pode ser apenas a clara)",
@@ -293,7 +293,7 @@
     },
     {
         "id": 13,
-        "receita": "Pastel na airfryer",
+        "nome": "Pastel na airfryer",
         "resumo":" Aqui, você aprende a fazer um pastel na airfryer, para facilitar o seu lanche. ",
         "ingredientes":["Massa fresca para pastel comprada pronta",
         "Recheio a gosto (sugestões: carne moída, frango desfiado, queijo, shitake, palmito)"],
@@ -311,7 +311,7 @@
     },
     {
         "id": 14,
-        "receita":"Homus rápido",
+        "nome":"Homus rápido",
         "resumo":" Homus é o nome de uma pasta feita com grão-de-bico, ideal para ser servida com pães ou torradas. Seu modo de preparo é tão simples e o resultado tão gostoso, que você vai se perguntar como nunca preparara essa receita antes.",
         "ingredientes":[
             "2 latas de grão-de-bico (280 g cada lata)",
@@ -336,7 +336,7 @@
     },
     {
         "id": 15,
-        "receita": "Frigideira de arroz com salsicha",
+        "nome": "Frigideira de arroz com salsicha",
         "resumo":" Um simples prato rapido e facil de fazer de arroz e salsicha. ",
         "ingredientes":[
             "2 colheres (sopa) de manteiga",
@@ -363,7 +363,7 @@
     },
     {
         "id": 16,
-        "receita": "Arroz Especial",
+        "nome": "Arroz Especial",
         "resumo":" Um delicioso Arroz com alguns ingredientes a mais trazendo uma refeição completa de sabor. ",
         "ingredientes":[
             "1 peito de frango em cubos",
@@ -391,7 +391,7 @@
     },
     {
         "id": 17,
-        "receita": "Bolinho de abobrinha",
+        "nome": "Bolinho de abobrinha",
         "resumo":" um novo modo de comer abobrinha.",
         "ingredientes":[
             "3 abobrinhas raladas",
@@ -480,7 +480,7 @@
     },
     {
         "id": 21,
-        "receita": "Salada fresh com manga",
+        "nome": "Salada fresh com manga",
         "resumo":" Como sera uma salada que combina abacate, manga, pepino, tomate e temperos? faça o teste aqui mesmo, e se surpreenda.",
         "ingredientes":[
             "1 manga palma em cubos",
@@ -503,7 +503,7 @@
     },
     {
         "id": 22,
-        "receita": "Mousse de gelatina de morango",
+        "nome": "Mousse de gelatina de morango",
         "resumo":"Uma mousse de morango supersimples. Nessa receita você só vai precisar de água quente, gelatina, creme de leite e leite condensado. Após hidratar a gelatina, é só bater tudo no liquidificador e levar para a geladeira. ",
         "ingredientes":[
             "½ xícara de chá de água quente",
@@ -526,7 +526,7 @@
     },
     {
         "id": 23,
-        "receita": "Escondidinho de morango com leite Ninho",
+        "nome": "Escondidinho de morango com leite Ninho",
         "resumo":" Uma sobremesa deliciosa e com o preparo muito fácil. Os morangos são cobertos por um brigadeiro branco de leite Ninho. E depois é só decorar com moranguinhos e se deliciar.",
         "ingredientes":[
             "1 lata de leite condensado",
@@ -552,7 +552,7 @@
     },
     {
         "id": 24,
-        "receita": "Mousse de maracujá fácil e cremoso",
+        "nome": "Mousse de maracujá fácil e cremoso",
         "resumo":" A mousse de maracujá é feita apenas misturando leite condensado, creme de leite, gelatina e suco de maracujá. Para deixar a sobremesa ainda mais gostosa, a sugestão é cobri-la com uma calda com polpa da fruta e açúcar. ",
         "ingredientes":[
             "1 lata de leite condensado",
@@ -575,7 +575,7 @@
     },
     {
         "id": 25,
-        "receita": "Mousse rápido de chocolate",
+        "nome": "Mousse rápido de chocolate",
         "resumo":" Um mousse de chocolate meio amargo cremoso. ",
         "ingredientes":[
             "1 barra de chocolate meio amargo",

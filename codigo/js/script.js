@@ -2,10 +2,9 @@ const receitasContainer = document.querySelector('#receitas-container');
 const loadercontainer = document.querySelector('.loader');
 const searchBar = document.getElementById('searchBar');
 const modal = document.getElementById('modal');
-const modalContent = document.querySelector('.modal-content');
+const modalContent = document.querySelector('.modal-item');
 
 let recipes = [];
-let recipe = 0;
 
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
@@ -16,7 +15,7 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 const getRecipe = async() => {
-    const response = await fetch('https://api.jsonbin.io/b/62942622402a5b380213e76d');
+    const response = await fetch('https://api.jsonbin.io/b/62a73d8b449a1f382106f650');
     recipes = await response.json();
     displayRecipe(recipes);
 }
@@ -47,19 +46,39 @@ const displayRecipe = ( recipes) => {
     receitasContainer.innerHTML = recipeBox; 
 }
     
+getRecipe();
 function abrirModal(index) {
     modal.style.top = "0";
+
+    const ingredientes = () => {
+        return recipes[index].ingredientes.map(ingrediente => { 
+            return `<li>${ingrediente}</li>`;
+        }).join("");
+    }
+
+    const preparo = () => {
+        return recipes[index].modo_de_preparo.map(passo => { 
+            return `<li>${passo}</li>`;
+        }).join("");
+    }
+
     const recipeModal = 
             `
-                <div>
+                <div class="modal-content">
                     <div>
                         <h3>${recipes[index].nome}</h3>
                         <div>
-                            <h4>Ingredientes </h4>
-                            <p>${recipes[index].ingredientes}</p>
-                            </br>
+                            <div class="modal-ingredientes-container">
+                                <div>
+                                    <h4>Ingredientes </h4>
+                                    <ul class="lista-ingredientes">
+                                        ${ingredientes()}
+                                    </ul>
+                                </div>
+                                    <img src=${recipes[index].imagem}>
+                                </div>
                             <h4>Modo de preparo: </h4>
-                            <p>${recipes[index].modo_de_preparo}</p>
+                            <p>${preparo()}</p>
                         </div>
                     </div>
                 </div>
@@ -70,5 +89,3 @@ function abrirModal(index) {
 function closeModal() {
     modal.style.top = "-100%";
 }
-
-getRecipe();
