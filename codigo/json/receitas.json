@@ -12,14 +12,15 @@
             "3 xícaras (chá) de água fervente"
         ],
         "modo_de_preparo": [
-            "Em uma panela, aqueça o óleo e refogue a cebola e o alho até que estejam transparentes",
-            "Junte o arroz e refogue bem até ficar brilhante",
-            "Adicione a água fervente e misture bem",
-            "Abaixe o fogo, tampe parcialmente a panela e deixe cozinhar até o arroz secar",
-            "Desligue o fogo, tampe a panela por mais 5 minutos para que o arroz termine o cozimento em seu próprio vapor"
+            "Em uma panela, aqueça o óleo e refogue a cebola e o alho até que estejam transparentes;",
+            "Junte o arroz e refogue bem até ficar brilhante;",
+            "Adicione a água fervente e misture bem;",
+            "Abaixe o fogo, tampe parcialmente a panela e deixe cozinhar até o arroz secar;",
+            "Desligue o fogo, tampe a panela por mais 5 minutos para que o arroz termine o cozimento em seu próprio vapor;"
         ],
         "tempo_de_preparo": "30 min",
-        "porcoes": "4"
+        "porcoes": "4",
+        "imagem":"https://images.aws.nestle.recipes/resized/508e90cc752880608500ad1646fd510e_ARROZ-BASICO-RECEITAS-NESTLE_1200_600.jpg"
     },
     {
         "id": 2,
@@ -32,13 +33,14 @@
             "Chimichurri e práprica à gosto"
         ],
         "modo_de_preparo": [
-            "Caso o peito de frango estiver congelado, espere descongelar",
-            "Tempere o peito de frango com alho amassado, chimichurri e paprica",
-            "Aqueça um fio de azeite ou oleo na frigideira e grelhe o frango ate que os dois lados estejam corados",
-            "Pronto!! Sirva-se com arroz e uma salada"
+            "Caso o peito de frango estiver congelado, espere descongelar;",
+            "Tempere o peito de frango com alho amassado, chimichurri e paprica;",
+            "Aqueça um fio de azeite ou oleo na frigideira e grelhe o frango ate que os dois lados estejam corados;",
+            "Pronto!! Sirva-se com arroz e uma salada."
         ],
         "tempo_de_preparo": "15 min",
-        "porcoes": "2"
+        "porcoes": "2",
+        "imagem": "https://www.sabornamesa.com.br/media/k2/items/cache/e4695529e9bbf8b60b6165d76397876b_XL.jpg"
     },
     {
         "id": 3,
@@ -60,7 +62,8 @@
             "Se necessário, corrija o sal e a pimenta. Desligue o fogo e sirva em seguida."
         ],
         "tempo_de_preparo": "30 min",
-        "porcoes": "5"
+        "porcoes": "5",
+        "imagem": "https://www.unileverfoodsolutions.com.br/dam/global-ufs/mcos/SLA/calcmenu/recipes/BR-recipes/chicken-&-other-poultry-dishes/strogonoff-de-frango/main-header.jpg"
     },
     {
         "id": 4,
@@ -84,7 +87,8 @@
             "Retire a pressão com cuidado e está pronto para servir"
         ],
         "tempo_de_preparo": "15 min",
-        "porcoes": "2"
+        "porcoes": "2",
+        "imagem": "https://www.receiteria.com.br/wp-content/uploads/frango-facil-na-panela-de-pressao.png"
     },
     {
         "id": 5,
@@ -104,7 +108,8 @@
             "Despeje a sopa em uma tigela, acrescente o frango desfiado, a cebolinha e a pimenta e misture. Esquente a sopa no microondas, ou no fogo (neste caso, transfira a sopa para uma panela), e sirva na sequência;"
         ],
         "tempo_de_preparo": "20 min",
-        "porcoes": "1"
+        "porcoes": "1",
+        "imagem":"https://img-global.cpcdn.com/recipes/55d3cda0da95a684/1200x630cq70/photo.jpg"
     },
     {
         "id": 6,
@@ -132,7 +137,9 @@
             "Agora é só servir. Bom apetite"
         ],
         "tempo_de_preparo": "30 min",
-        "porcoes": "2"
+        "porcoes": "2",
+        "imagem":"https://i.ytimg.com/vi/nnkID69NZ4g/maxresdefault.jpg"
+
     },
     {
         "id": 7,
@@ -153,7 +160,8 @@
             "Agora é só servir. Bom apetite!"
         ],
         "tempo_de_preparo": " 25 min",
-        "porcoes": "2"
+        "porcoes": "2",
+        "imagem":"https://i0.wp.com/centralblogs.com.br/wp-content/uploads/2021/09/almondegas-de-carne-moida.jpg?ssl=1"
     },
     {
         "id": 8,
@@ -169,13 +177,14 @@
         ],
         "modo_de_preparo": [
             "Bata os ovos inteiros;",
-            "Tempere com o queijo, o cheiro-verde picado e sal e pimenta do reino a gosto.",
-            "Doure a cebola na manteiga, junte os ovos, refogue bem e, assim que começar a endurecer, mexa com um garfo, a fim de ficar em pedacinhos",
-            "Depois, vá mexendo e juntando a farinha, até formar uma farofa úmida e solta. Prove sal e pimenta",
+            "Tempere com o queijo, o cheiro-verde picado e sal e pimenta do reino a gosto;",
+            "Doure a cebola na manteiga, junte os ovos, refogue bem e, assim que começar a endurecer, mexa com um garfo, a fim de ficar em pedacinhos;",
+            "Depois, vá mexendo e juntando a farinha, até formar uma farofa úmida e solta. Prove sal e pimenta;",
             "Agora é só servir. Bom apetite!"
         ],
         "tempo_de_preparo": "20 min",
-        "porcoes": "5"
+        "porcoes": "5",
+        "imagem":"https://naminhapanela.com/wp-content/uploads/2010/11/farofa-de-ovos.jpg"
     },
     {
         "id": 9,
@@ -191,16 +200,226 @@
         ],
         "modo_de_preparo": [
             "Bata os ovos inteiros;",
-            "Tempere com o queijo, o cheiro-verde picado e sal e pimenta do reino a gosto.",
-            "Doure a cebola na manteiga, junte os ovos, refogue bem e, assim que começar a endurecer, mexa com um garfo, a fim de ficar em pedacinhos",
-            "Depois, vá mexendo e juntando a farinha, até formar uma farofa úmida e solta. Prove sal e pimenta",
+            "Tempere com o queijo, o cheiro-verde picado e sal e pimenta do reino a gosto;",
+            "Doure a cebola na manteiga, junte os ovos, refogue bem e, assim que começar a endurecer, mexa com um garfo, a fim de ficar em pedacinhos;",
+            "Depois, vá mexendo e juntando a farinha, até formar uma farofa úmida e solta. Prove sal e pimenta;",
             "Agora é só servir. Bom apetite!"
         ],
         "tempo_de_preparo": "20 min",
-        "porcoes": "5"
+        "porcoes": "5",
+        "imagem":"https://static.clubedaanamariabraga.com.br/wp-content/uploads/2019/04/ovos-mexidos-cremosos-da-ana-maria-1-1024x576.jpg"
     },
     {
         "id": 10,
+        "receita": "Crepioca de queijo com tomate e orégano",
+        "resumo":"A crepioca é uma pedida bem simples – ovo e tapioca misturados e depois preparados em uma frigideira. Essa é uma ótima pedida para o café da manhã ou até mesmo para um lanche rápido, mas capaz de matar a fome.",
+        "ingredientes":[
+            "1 ovo",
+            "2 colheres de sopa de tapioca",
+            "1 pitada de sal rosa",
+            "1 fio de azeite de oliva",
+            "1 fatia de queijo mussarela",
+            "1 colher de sopa de tomate picadinho",
+            "Orégano a gosto"
+        ],
+        "modo_de_preparo":[
+            "Misture o ovo, a tapioca e o sal;",
+            "Coloque o azeite na frigideira e aqueça;",
+            "Despeje a massa da crepioca;",
+            "Espere soltar do fundo da frigideira e vire;",
+            "Adicione o queijo, o tomate o orégano;",
+            "Tampe a frigideira e espere de 1 a 2 minutos;",
+            "Sirva aberto ou enrolado e cortado em 3 partes. Bom apetite."
+        ],
+        "tempo_de_preparo": "10 min",
+        "porcoes": "1",
+        "imagem":"https://www.receiteria.com.br/wp-content/uploads/crepioca-de-queijo-com-tomate-e-oregano-1.jpg"
+    },
+    {
+        "id": 11,
+        "receita": "Macarrão de Panela de Pressão Cremoso",
+        "resumo":"Aprenda a fazer o famoso macarrão de panela de pressão cremoso, uma receita prática, super fácil de fazer, ideal para quem não quer perder muito tempo na cozinha e adora macarrão",
+        "ingredientes":[
+            "Macarrão - 1 pacote de Penne ou Parafuso",
+            "Molho de tomate - 1 lata",
+            "Creme de Leite - 1 caixa",
+            "Mussarela - 100g picada",
+            "Presunto - 100g picado",
+            "Azeitona sem caroço - 100g picada",
+            "Azeite - 1 fio",
+            "Milho em conserva - 1 lata",
+            "Cebola - 1 média picada",
+            "Alho - 3 dentes picados",
+            "Orégano - 1 colher de chá",
+            "Sal - a gosto",
+            "Pimenta do Reino - a gosto",
+            "Água quente - 700ml (aproximadamente 2 medidas da lata de molho de tomate)"
+        ],
+        "modo_de_preparo":[
+            "Para iniciar o preparo do nosso macarrão de panela de pressão cremoso, em uma panela de pressão, refogue a cebola e o alho no azeite;",
+            "Em seguida, adicione o molho de tomate, as azeitonas, o presunto, a água quente, o creme de leite e o milho;",
+            "Misture bem os ingredientes, acrescente o macarrão e tempere com sal e pimenta do reino a gosto;",
+            "Feche a panela de pressão, e  assim que a panela começar a chiar, conte 4 minutos e desligue o fogo;",
+            "Aguarde a pressão sair, abra a panela de pressão e finalize acrescentando a mussarela e o orégano;",
+            "Aguarde a mussarela derreter e aproveite!",
+            "Prontinho, já pode servir o macarrão de panela de pressão cremoso. Bom apetite!"
+        ],
+        "tempo_de_preparo": "15 min",
+        "porcoes": "5",
+        "imagem":"https://www.receiteria.com.br/wp-content/uploads/macarrao-cremoso-na-panela-de-pressao.jpg"
+
+    },
+    {
+        "id": 12,
+        "receita": "Pão integral de microondas",
+        "resumo":"Essa é uma receita que, além de rápida, é de um pão integral. Você só precisa misturar ovos, farelo de aveia, iogurte e fermento e levar a combinação ao micro-ondas por apenas 2 minutos e seu pão estará prontinho para ser saboreado.",
+        "ingredientes":[
+            "1 ovo (pode ser apenas a clara)",
+            "1 colher de sopa de farelo de aveia (pode trocar por outra farinha)",
+            "1 colher de sopa de iogurte desnatado, ou 1 colher de sopa de água",
+            "1 colher de sobremesa de fermento para bolo, em pó",
+            "Fique á vontade para adicionar ervas secas ou sementes"
+        ],
+        "modo_de_preparo":[
+            "Junte todos os ingredientes em uma vasilha e misture-os bem;",
+            "Em seguida, coloque a massa em uma pequena travessa;",
+            "Leve ao microondas na potência alta por cerca de 2 minutos e 20 segundos;",
+            "Depois de pronto, você pode cortar ao meio e dourar na frigideira ou grill."
+        ],
+        "tempo_de_preparo": "6 min",
+        "porcoes": "1",
+        "imagem":"https://www.dopaoaocaviar.com.br/wp-content/uploads/2014/07/foto-32-e1406251358958.jpg"
+
+    },
+    {
+        "id": 13,
+        "receita": "Pastel na airfryer",
+        "resumo":" Aqui, você aprende a fazer um pastel na airfryer, para facilitar o seu lanche. ",
+        "ingredientes":["Massa fresca para pastel comprada pronta",
+        "Recheio a gosto (sugestões: carne moída, frango desfiado, queijo, shitake, palmito)"],
+        "modo_de_preparo":[
+            "Abra a massa e coloque o recheio;",
+            "Feche o pastel com a pontinha do garfo;",
+            "Pincele a massa com azeite para que não fique ressecada;",
+            "Depois, coloque na airfryer preaquecida a 180° graus e deixe por 10 minutos;",
+            "O tempo pode variar de acordo com sua preferência. Se você gosta da massa mais clara, deixe menos tempo; se prefere mais dourada, deixe mais;"
+        ],
+        "tempo_de_preparo": "15 min",
+        "porcoes": "1",
+        "imagem":"https://nacolher.com/wp-content/uploads/2021/01/Pastel-na-Airfryer.jpg"
+
+    },
+    {
+        "id": 14,
+        "receita":"Homus rápido",
+        "resumo":" Homus é o nome de uma pasta feita com grão-de-bico, ideal para ser servida com pães ou torradas. Seu modo de preparo é tão simples e o resultado tão gostoso, que você vai se perguntar como nunca preparara essa receita antes.",
+        "ingredientes":[
+            "2 latas de grão-de-bico (280 g cada lata)",
+            "3 dentes de alho",
+            "1/2 limão",
+            "1 colher de sopa de tahine",
+            "3 colheres de sopa de azeite",
+            "Sal a gosto",
+            "Pimenta-do-reino a gosto",
+            "Água do cozimento do grão-de-bico"
+        ],
+        "modo_de_preparo":[
+            "Escorra o grão-de-bico e reserve a água;",
+            "Em um processador, coloque o grão-de-bico, o alho, o suco do limão, o tahine, o azeite, o sal, a pimenta e um pouco ",",da água das latinhas;",
+            "Bata até obter uma pasta homogênea;",
+            "Está pronto."
+        ],
+        "tempo_de_preparo": "5 min",
+        "porcoes": "15",
+        "imagem":"https://static.clubedaanamariabraga.com.br/wp-content/uploads/2019/03/homus-scaled.jpg"
+
+    },
+    {
+        "id": 15,
+        "receita": "Frigideira de arroz com salsicha",
+        "resumo":" Um simples prato rapido e facil de fazer de arroz e salsicha. ",
+        "ingredientes":[
+            "2 colheres (sopa) de manteiga",
+            "1/2 cebola picada",
+            "1 lata de milho escorrido",
+            "1 tomate sem sementes picado",
+            "1 colher (sopa) de extrato de tomate",
+            "300g de salsicha aferventada em rodelas",
+            "3 xícaras (chá) de arroz branco cozido",
+            "1/2 xícara (chá) de requeijão cremoso",
+            "Sal e cheiro-verde picado a gosto",
+            "Batata palha para polvilhar"
+        ],
+        "modo_de_preparo":[
+            "Aqueça uma frigideira com a manteiga e frite a cebola até dourar;",
+            "Adicione o milho, o tomate, o extrato, a salsicha e refogue por 3 minutos;",
+            "Acrescente o arroz, o requeijão, sal e cheiro-verde e misture bem;",
+            "Desligue o fogo e polvilhe com batata palha para servir."
+        ],
+        "tempo_de_preparo": "15 min",
+        "porcoes": "3",
+        "imagem":"https://guiadacozinha.com.br/wp-content/uploads/2019/10/frigideira-de-arroz-com-salsicha-53909.jpg"
+
+    },
+    {
+        "id": 16,
+        "receita": "Arroz Especial",
+        "resumo":" Um delicioso Arroz com alguns ingredientes a mais trazendo uma refeição completa de sabor. ",
+        "ingredientes":[
+            "1 peito de frango em cubos",
+            "1 cebola média picada",
+            "alho a gosto",
+            "4 colheres de sopa de óleo",
+            "1 xícara e meia de arroz lavado e escorrido",
+            "1 vidro de palmito picado",
+            "1 lata de molho de tomate",
+            "1/2 lata de milho verde",
+            "2 tabletes de caldo de galinha",
+            "3 xícaras de água quente"
+        ],
+        "modo_de_preparo":[
+            "Na panela de pressão frite a cebola e o peito de frango em óleo. Junte o arroz e refogue;",
+            "Então junte o palmito, o milho, o molho de tomate e os tabletes de caldo de galinha dissolvidos em água quente;",
+            "Feche a panela de pressão e conte 5 minutos após o início da fervura;",
+            "Retire a pressão da panela, abre e verifique se o arroz está no ponto;",
+            "Se não estiver, feche a panela e conte mais 3 minutos assim que começar a fazer barulho;",
+            "Para dar um charme ao prato, sirva polvilhado com salsa picada.",
+            "Fica cremosinho, leve e saboroso."],
+        "tempo_de_preparo": "15 min",
+        "porcoes": "6"
+
+    },
+    {
+        "id": 17,
+        "receita": "Bolinho de abobrinha",
+        "resumo":" um novo modo de comer abobrinha.",
+        "ingredientes":[
+            "3 abobrinhas raladas",
+            "1 cebola ralada",
+            "2 ovos",
+            "1/2 pimentão verde picado",
+            "2 xícaras de farinha de trigo",
+            "1 xícara de cheiro verde",
+            "1 tomate picado",
+            "Sal",
+            "Pimenta",
+            "1 colher de chá de fermento em pó",
+            "Óleo pra fritar"
+        ],
+        "modo_de_preparo":[
+            "Junte todos os ingredientes em uma vasilha;",
+            "Misture e faça bolinhas;",
+            "Frite em óleo quente.",
+            "Bom apetite!!"
+        ],
+        "tempo_de_preparo": "15 min",
+        "porcoes": "15",
+        "imagem":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJxxN4ENEGhcYAd7p2mE4kU0Tt4eDJUyRbrA&usqp=CAU"
+
+    },
+
+    {
+        "id": 18,
         "nome": "Brigadeiro de colher",
         "resumo": "Um delicioso brigadeiro, que utiliza apenas leite condensado, creme de leite, chocolate em pó",
         "ingredientes": [
@@ -209,16 +428,17 @@
             "1/2 caixinha de creme de leite"
         ],
         "modo_de_preparo": [
-            "Em uma panela misture todos os ingredientes",
-            "Depois de misturado ligue o fogo e fique mexendo para nao queimar",
-            "Quando o brigadeiro começar a desgrudar da panela, desligue o fogo",
-            "Pronto!! coloque em um prato e deixe esfriar"
+            "Em uma panela misture todos os ingredientes;",
+            "Depois de misturado ligue o fogo e fique mexendo para não queimar;",
+            "Quando o brigadeiro começar a desgrudar da panela, desligue o fogo;",
+            "Pronto!! coloque em um prato e deixe esfriar."
         ],
         "tempo_de_preparo": "15 min",
-        "porcoes": "8"
+        "porcoes": "8",
+        "imagem":"https://www.anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-2650-8727eed4fd0b7775406e41407cfb11c9.png"
     },
     {
-        "id": 11,
+        "id": 19,
         "nome": "Mousse de limão",
         "resumo": "Rceita de mousse bem refrescante, que utiliza apenas leite condensado, limão, creme de leite",
         "ingredientes": [
@@ -227,16 +447,17 @@
             "1/2 lata de suco de limão"
         ],
         "modo_de_preparo": [
-            "Coloque o creme de leite e o leite condensado no liquidificador e bata",
-            "Adicione o suco de limão e bata por 3 minutos",
-            "Coloque em uma vasilha e deixe na geladeira até gelar",
-            "Apos geçar, sirva-se e aproveite"
+            "Coloque o creme de leite e o leite condensado no liquidificador e bata;",
+            "Adicione o suco de limão e bata por 3 minutos;",
+            "Coloque em uma vasilha e deixe na geladeira até gelar;",
+            "Apos geçar, sirva-se e aproveite."
         ],
         "tempo_de_preparo": "10 min",
-        "porcoes": "6"
+        "porcoes": "6",
+        "imagem":"https://img.itdg.com.br/tdg/images/recipes/000/155/693/332853/332853_original.jpg?mode=crop&width=710&height=400"
     },
     {
-        "id": 12,
+        "id": 20,
         "nome": "Brownie de microondas",
         "resumo": "Um delicioso brownie, feito no microondas de forma rapida, que você nunca viu!",
         "ingredientes": [
@@ -254,6 +475,124 @@
             "Agora é só servir. Bom apetite"
         ],
         "tempo_de_preparo": "5 min",
-        "porcoes": "1"
+        "porcoes": "1",
+        "imagem":"https://img.itdg.com.br/images/recipes/000/197/206/298362/298362_original.jpg"
+    },
+    {
+        "id": 21,
+        "receita": "Salada fresh com manga",
+        "resumo":" Como sera uma salada que combina abacate, manga, pepino, tomate e temperos? faça o teste aqui mesmo, e se surpreenda.",
+        "ingredientes":[
+            "1 manga palma em cubos",
+            "1 abacate em cubos",
+            "2 pepinos japonês em cubos",
+            "2 tomates italianos em cubos",
+            "Salsinha a gosto",
+            "Sal a gosto",
+            "2 colheres de sopa de vinagre de maçã"
+        ],
+        "modo_de_preparo":[
+            "Em uma vasilha, coloque todos os ingredientes e misture tudo muito bem;",
+            "Leve para gelar antes de servir;",
+            "Está pronto."
+        ],
+        "tempo_de_preparo": "5 min",
+        "porcoes": "5",
+        "imagem":"https://www.receiteria.com.br/wp-content/uploads/salada-fresh-com-manga-01.jpg"
+    
+    },
+    {
+        "id": 22,
+        "receita": "Mousse de gelatina de morango",
+        "resumo":"Uma mousse de morango supersimples. Nessa receita você só vai precisar de água quente, gelatina, creme de leite e leite condensado. Após hidratar a gelatina, é só bater tudo no liquidificador e levar para a geladeira. ",
+        "ingredientes":[
+            "½ xícara de chá de água quente",
+            "1 pacote de gelatina de morango",
+            "1 lata de creme de leite sem soro",
+            "1 lata de leite condensado"
+        ],
+        "modo_de_preparo":[
+            "Em um liquidificador, bata a água quente e a gelatina;",
+            "Deixe reservado por 5 minutos;",
+            "Acrescente o creme de leite e o leite condensado;",
+            "Bata por cerca de 10 minutos ou até ficar bem homogêneo;",
+            "Transfira para um refratário e leve para a geladeira por, pelo menos, 2 horas.",
+            "Agora é só servir. Bom apetite."
+        ],
+        "tempo_de_preparo": "15 min",
+        "porcoes": "8",
+        "imagem":"https://i.ytimg.com/vi/smxaBOoWE1c/maxresdefault.jpg"
+    
+    },
+    {
+        "id": 23,
+        "receita": "Escondidinho de morango com leite Ninho",
+        "resumo":" Uma sobremesa deliciosa e com o preparo muito fácil. Os morangos são cobertos por um brigadeiro branco de leite Ninho. E depois é só decorar com moranguinhos e se deliciar.",
+        "ingredientes":[
+            "1 lata de leite condensado",
+            "3 colheres de sopa de leite Ninho",
+            "1 colher de sopa de manteiga (ou margarina)",
+            "4 morangos fatiados e outros para decorar",
+            "1 colher de sopa de creme de leite",
+            "Leite em pó a gosto"
+        ],
+        "modo_de_preparo":[
+            "Reúna todos os ingredientes;",
+            "Em uma panela ao fogo médio, coloque o leite condensado, o leite Ninho, a manteiga e mexa, sem parar, até o brigadeiro começar a desgrudar do fundo da panela;",
+            "Reserve;",
+            "Coloque o creme de leite e os morangos fatiados em uma tigela, e misture;",
+            "Em uma travessa pequena, faça uma camada com metade do brigadeiro de Ninho; depois, adicione os morangos com creme de leite, e cubra-os com a outra parte do brigadeiro;",
+            "Decore o escondidinho com morangos e salpique leite Ninho por cima.",
+            "Agora é só servir. Bom apetite!"
+        ],
+        "tempo_de_preparo": "15 min",
+        "porcoes": "4",
+        "imagem":"https://www.receiteria.com.br/wp-content/uploads/escondidinho-de-morango-com-leite-ninho-00-730x449.jpg"
+    
+    },
+    {
+        "id": 24,
+        "receita": "Mousse de maracujá fácil e cremoso",
+        "resumo":" A mousse de maracujá é feita apenas misturando leite condensado, creme de leite, gelatina e suco de maracujá. Para deixar a sobremesa ainda mais gostosa, a sugestão é cobri-la com uma calda com polpa da fruta e açúcar. ",
+        "ingredientes":[
+            "1 lata de leite condensado",
+            "1 lata de creme de leite",
+            "200 ml de suco concentrado de maracujá",
+            "1 envelope de gelatina sem sabor (8g)",
+            "5 colheres de água"
+        ],
+        "modo_de_preparo":[
+            "Hidrate a gelatina com água por 2 minutos, depois coloque no microondas por 30 segundos;",
+            "Bata no liquidificador o leite condensado, creme de leite, suco de maracujá;",
+            "Depois que estiver todo misturado, bata a gelatina hidratada apenas para misturar;",
+            "Coloque em uma travessa ou pequenos copos, cubra com papel filme e leve à geladeira por no mínimo 2 horas.",
+            "Depois é só servir."
+        ],
+        "tempo_de_preparo": "10 min",
+        "porcoes": "5",
+        "imagem":"https://s2.glbimg.com/ieSB-6bn_LFLP__Oc6MFYhi3ZX0=/0x0:560x367/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2020/w/k/fRWB8zR66DJ9XtjHWJfg/design-sem-nome-2-.jpg"
+    
+    },
+    {
+        "id": 25,
+        "receita": "Mousse rápido de chocolate",
+        "resumo":" Um mousse de chocolate meio amargo cremoso. ",
+        "ingredientes":[
+            "1 barra de chocolate meio amargo",
+            "1 pacote de gelatina sem sabor",
+            "1 lata de leite condensado",
+            "1 lata de creme de leite",
+            "1 medida da lata de água quente (para dissolver a gelatina)"
+        ],
+        "modo_de_preparo":[
+            "Derreta o chocolate com o creme de leite em uma panela e junte ao leite condensado e a gelatina dissolvida na água quente;",
+            "Bata tudo no liquidificador;",
+            "Coloque em um prato e reserve até que esfrie;",
+            "Guarde na geladeira para endurecer em torno de 2 a 3 horas."
+        ],
+        "tempo_de_preparo": " 10 minutos ",
+        "porcoes":"8",
+        "imagem":"https://img.estadao.com.br/thumbs/640/resources/jpg/2/1/1622262093312.jpg"
+    
     }
 ]
