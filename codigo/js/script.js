@@ -2,7 +2,7 @@ const receitasContainer = document.querySelector('#receitas-container');
 const loadercontainer = document.querySelector('.loader');
 const searchBar = document.getElementById('searchBar');
 const modal = document.getElementById('modal');
-const modalContent = document.querySelector('.modal-content');
+const modalContent = document.querySelector('.modal-item');
 
 let recipes = [];
 let recipe = 0;
@@ -49,15 +49,35 @@ const displayRecipe = ( recipes) => {
     
 function abrirModal(index) {
     modal.style.top = "0";
+    
+    function adicionarIngredientes(ingrediente) {
+        let li = document.createElement('li');
+        li.textContent = ingrediente;
+        return li;
+    }
+
+    const ingredientes = () => {
+        return recipes[index].ingredientes.map(ingrediente => { 
+            return `<li>${ingrediente}</li>`;
+        }).join("");
+    }
+
+
     const recipeModal = 
             `
-                <div>
+                <div class="modal-content">
                     <div>
                         <h3>${recipes[index].nome}</h3>
                         <div>
-                            <h4>Ingredientes </h4>
-                            <p>${recipes[index].ingredientes}</p>
-                            </br>
+                            <div class="modal-ingredientes-container">
+                                <div>
+                                    <h4>Ingredientes </h4>
+                                    <ul class="lista-ingredientes">
+                                        ${ingredientes()}
+                                    </ul>
+                                </div>
+                                <img src="https://picsum.photos/300/200">
+                            </div>
                             <h4>Modo de preparo: </h4>
                             <p>${recipes[index].modo_de_preparo}</p>
                         </div>
