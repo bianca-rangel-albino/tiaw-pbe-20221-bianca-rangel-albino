@@ -1,27 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/c99837219b.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link href="../css/styles.css" rel="stylesheet" type="text/css" />
-    <title>TechFood</title>
-  </head>
 
-  <body>
-    <!-- Header -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/c99837219b.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+  <title>TechFood</title>
+</head>
 
-    <header id="header">
+<body>
+  <!-- Header -->
+
+  <header>
+    <nav class="navbar navbar-expand-lg" style="background-color: #524439;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">TechFood</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: #ffeace;">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-4">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Encontrar receitas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Minhas receitas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+
+
+  <!-- <header id="header">
       <a href="/"><i class="fa-solid fa-house"></i></a>
       <nav>
         <ul class="menu">
@@ -30,30 +58,63 @@
           <li><a href="#">Minhasssss receitas</a></li>
         </ul>
       </nav>
-    </header>
+    </header> -->
 
-    <!--Tela principal-->
+  <!--Tela principal-->
 
-    <section id="hero">
-      <img id="hero-logo" src="/assets/img/logo.png" />
+  <section id="hero">
+    <div class="container-fluid mt-5">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <img class="mx-auto img-fluid d-block w-50 rounded-circle" src="/assets/img/logo.png" />
+        </div>
 
-      <div id="hero-content">
-        <h1 id="hero-title">TechFood.</h1>
-        <h3 id="hero-subtitle">O melhor lugar para encontrar a sua receita</h3>
+        <div class="col-lg-4">
+          <div id="hero-content">
+            <h1 id="hero-title">TechFood.</h1>
+            <h3 id="hero-subtitle">O melhor lugar para encontrar a sua receita</h3>
 
-        <button
-          type="button"
-          id="hero-button"
-          onclick="location.href='/html/telaDeReceitas.html'"
-        >
-          Buscar receita &raquo;
-        </button>
+            <button type="button" id="hero-button" onclick="location.href='/html/telaDeReceitas.html'">
+              Buscar receita &raquo;
+            </button>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
 
-    <!--Footer-->
 
-    <footer id="footer">
+
+
+  </section>
+
+  <!--Footer-->
+
+  <div class="container">
+    <footer class="fixed-bottom p-4 d-flex flex-wrap justify-content-between align-items-center" style="background-color: #524439;">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <img class="rounded-circle img-fluid" src="/assets/img/logo.png" width="50" height="40" />
+        </a>
+        <span style="color: #ffeace;">© 2021 TechFood</span>
+      </div>
+
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a href="">
+            <i class="fa-brands fa-facebook fa-2xl" style="color: #ffeace;"></i>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a href="">
+            <i class="fa-brands fa-instagram fa-2xl" style="color: #ffeace;"></i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </div>
+
+
+  <!-- <footer id="footer">
       <div id="social-icons">
         <a href="">
           <i class="fa-brands fa-instagram fa-2xl"></i>
@@ -70,6 +131,11 @@
       <div id="footer-logo">
         <img src="/assets/img/logo.png" />
       </div>
-    </footer>
-  </body>
+    </footer> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
