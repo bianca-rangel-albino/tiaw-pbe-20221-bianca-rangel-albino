@@ -2,79 +2,103 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/c99837219b.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
-    <link href="../css/styles.css" rel="stylesheet" type="text/css" />
-    <title>TF Recipes</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/c99837219b.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link href="../css/styles.css" rel="stylesheet" type="text/css" />
+  <title>TF Recipes</title>
 </head>
 
 <body>
-    <!--Header-->
+  <!--Header-->
+  <header>
+    <nav class="navbar navbar-expand-lg" style="background-color: #524439;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">TechFood</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="color: #ffeace;">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-4">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./telaSobre.html">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./telaDeReceitas.html">Encontrar receitas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./telaMinhasReceitas.html">Minhas receitas</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-    <header id="header">
-        <a href="/"><i class="fa-solid fa-house"></i></a>
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Encontrar receitas</a></li>
-                <li><a href="./TelaDePerfil.html">Minhas receitas</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Content -->
 
-    <div id="receitas-title">
-        <h2>TechFood</h2>
-        <input type="text" id="searchBar" placeholder="Encontrar receita"/>
+  <div id="receitas-title">
+    <h2 class="mt-5 display-3">TechFood</h2>
+    <input type="text" id="searchBar" placeholder="Encontrar receita" />
+  </div>
+
+  <div>
+    <div id="receitas-container">
     </div>
+  </div>
 
-    <div>
-        <div id="receitas-container">
-        </div>
+  <!-- Modal -->
+  <div class="full-screen hidden flex-container-center">
+    <div class="container">
+      <div class="modal-item">
+      </div>
     </div>
+    <button onclick="closePopup()">Dexia pra lá</button>
+  </div>
 
-    <!-- Modal -->
+  <!-- Footer -->
 
-    <div class="bgModal" id="modal">
-        <div class="modal">
-            <div class="modal-card">
-                <div class="modal-content">
-                    <div class="modal-item">
-                    </div>
-                </div>
-                <span class="close" onClick="closeModal()">Deixa pra lá</span>
-            </div>
-        </div>
-    </div>
+  <div class="container">
+    <footer class="fixed-bottom p-2 d-flex flex-wrap justify-content-between align-items-center"
+      style="background-color: #524439;">
+      <div class="col-md-4 d-flex align-items-center">
+        <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+          <img class="rounded-circle img-fluid" src="/assets/img/logo.png" width="50" height="40" />
+        </a>
+        <span style="color: #ffeace;">© 2021 TechFood</span>
+      </div>
 
-    <!-- Footer -->
-
-    <footer id="footer">
-        <div id="social-icons">
-            <a href="">
-                <i class="fa-brands fa-instagram fa-2xl"></i>
-            </a>
-            <a href="">
-                <i class="fa-brands fa-facebook fa-2xl"></i>
-            </a>
-        </div>
-        <div id="copyright">
-            <p>Copyright &copy; 2022 todos os direitos reservados</p>
-        </div>
-        <div id="footer-logo">
-            <img src="/assets/img/logo.png" alt="TechFood logo">
-        </div>
+      <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+        <li class="ms-3">
+          <a href="">
+            <i class="fa-brands fa-facebook fa-2xl" style="color: #ffeace;"></i>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a href="">
+            <i class="fa-brands fa-instagram fa-2xl" style="color: #ffeace;"></i>
+          </a>
+        </li>
+      </ul>
     </footer>
-    </div>
+  </div>
 
-
-
-    <button onClick="logout()"> Sair </button>
-    <script type="text/javascript" src="../js/script.js"></script>
+  <button onClick="logout()"> Sair </button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/script.js"></script>
+  <script type="text/javascript" src="../js/handleLogout.js"></script>
 </body>
 
 </html>
