@@ -12,12 +12,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link href="../css/styles.css" rel="stylesheet" type="text/css" />
-  <title>TechFood</title>
+  <title>TF Recipes</title>
 </head>
 
 <body>
-  <!-- Header -->
-
+  <!--Header-->
   <header>
     <nav class="navbar navbar-expand-lg" style="background-color: #524439;">
       <div class="container-fluid">
@@ -29,50 +28,52 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav gap-4">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-house"></i></a>
+              <a class="nav-link" href="../index.html"><i class="fa-solid fa-house"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre</a>
+              <a class="nav-link" href="./telaSobre.html">Sobre</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Encontrar receitas</a>
+              <a class="nav-link" href="./telaDeReceitas.html">Encontrar receitas</a>
             </li>
             <li class="nav-item">
               <a class="nav-link">Minhas receitas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"><i class="fa-solid fa-door"></i></a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  
-  <!--Tela principal-->
 
-  <section id="hero">
-    <div class="container-fluid mt-5">
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <img class="mx-auto img-fluid d-block w-50 rounded-circle" src="/assets/img/logo.png" />
-        </div>
+  <!-- Content -->
 
-        <div class="col-lg-4">
-          <div id="hero-content">
-            <h1 id="hero-title">TechFood</h1>
-            <h3 id="hero-subtitle">O melhor lugar para encontrar a sua receita</h3>
+  <div id="receitas-title">
+    <h2 class="mt-5 display-3">TechFood</h2>
+    <input type="text" id="searchBar" placeholder="Encontrar receita" />
+  </div>
 
-            <button type="button" id="hero-button" onclick="location.href='/html/telaDeLogin.html'">
-              Buscar receita &raquo;
-            </button>
-          </div>
-        </div>
+  <div>
+    <div id="receitas-container">
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="full-screen hidden flex-container-center">
+    <div class="container">
+      <div class="modal-item">
       </div>
     </div>
-  </section>
+    <button onclick="closePopup()">Dexia pra lá</button>
+  </div>
 
-  <!--Footer-->
+  <!-- Footer -->
 
   <div class="container">
-    <footer class="fixed-bottom p-4 d-flex flex-wrap justify-content-between align-items-center" style="background-color: #524439;">
+    <footer class="fixed-bottom p-2 d-flex flex-wrap justify-content-between align-items-center"
+      style="background-color: #524439;">
       <div class="col-md-4 d-flex align-items-center">
         <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
           <img class="rounded-circle img-fluid" src="/assets/img/logo.png" width="50" height="40" />
@@ -95,9 +96,12 @@
     </footer>
   </div>
 
+  <button onClick="logout()"> Sair </button>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../js/handleSavedRecipes.js"></script>
+  <script type="text/javascript" src="../js/handleLogout.js"></script>
 </body>
 
 </html>

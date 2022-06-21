@@ -68,10 +68,6 @@ newUserConfirmPassword.addEventListener("keyup", () => {
 });
 
 function cadastro() {
-  console.log(validNewUserName);
-  console.log(validNewUserPassword);
-  console.log(validNewUserConfirmPassword);
-
   if (validNewUserName && validNewUserPassword && validNewUserConfirmPassword) {
     //Salvando usuarios no localStorage
 
