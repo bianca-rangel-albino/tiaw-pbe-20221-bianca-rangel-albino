@@ -16,8 +16,9 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 const getSavedRecipes = async () => {
-    recipes = await JSON.parse(localStorage.getItem("favRecipies") || "[]");
+    recipes = await fetch('https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/users/1/receitas_salvas');
     displayRecipe(recipes);
+    
 }
 
 
