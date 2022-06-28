@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,31 +12,35 @@
     <link href="../css/styles.css" rel="stylesheet" type="text/css" />
     <title>TF Recipes</title>
 </head>
-<body>
-    
-    <h1>Techfood</h1>
-    <h3><span id="nome"></span></h3> 
-    <p>Seja bem vindo ao Guia de Receitas.</p>
-<br>
-    <h3>Editar Perfil</h3>
-    <li>- Editar nome</li>
-    <li>- Editar apelido</li>
-    <li>- Editar telefone</li>
 
-    <div class="label-input">
-        <input type="name" id="new-user-name" placeholder="nome" />
-      </div>
-      <div class="label-input">
-          <input type="name" id="user-apelido" placeholder="apelido" />
-        </div><div class="label-input">
+<body>
+    <div class="content">
+        <h1>Techfood</h1>
+        <h3><span id="nome"></span></h3>
+        <p>Seja bem vindo ao Guia de Receitas.</p>
+        <br>
+        <h3>Editar Perfil</h3>
+        <li>- Editar nome</li>
+        <li>- Editar apelido</li>
+        <li>- Editar telefone</li>
+
+        <div class="label-input">
+            <input type="name" id="new-user-name" placeholder="nome" />
+        </div>
+        <div class="label-input">
+            <input type="name" id="user-apelido" placeholder="apelido" />
+        </div>
+        <div class="label-input">
             <input type="number" id="user-telefone" placeholder="telefone" />
-          </div>
+        </div>
         <button onClick="editar()"> [Editar] </button>
-        
-    <br>
-    <button onClick="logout()"> [Sair] </button>
-    
-    
+
+        <br>
+        <button onClick="logout()"> [Sair] </button>
+    </div>
+
+
     <script type="text/javascript" src="../js/handleLogout.js"></script>
 </body>
+
 </html>
