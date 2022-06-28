@@ -15,10 +15,10 @@ searchBar.addEventListener('keyup', (e) => {
     displayRecipe(filteredCharacters);
 });
 
-const getRecipe = async () => {
-    const response = await fetch('https://api.jsonbin.io/b/62a73d8b449a1f382106f650');
-    recipes = await response.json();
+const getSavedRecipes = async () => {
+    recipes = await fetch('https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/users/1/receitas_salvas');
     displayRecipe(recipes);
+    
 }
 
 
@@ -34,7 +34,7 @@ const displayRecipe = (recipes) => {
                         <ul>
                             <li><i class="fa-solid fa-house-chimney"></i>${tempo_de_preparo}</li>
                             <li><i class="fa-solid fa-user"></i>${porcoes}</li>
-                            <li onClick="favoritar(${index})"><i class="fa-solid fa-heart" id="coracao${index}"></i>Favorito</li>
+                            <li onClick="favoritar(${index})"><i class="fa-solid fa-heart"></i>Favorito</li>
                         </ul>
                     </div>
                     <div class="link">
@@ -47,22 +47,13 @@ const displayRecipe = (recipes) => {
     receitasContainer.innerHTML = recipeBox;
 }
 
-function favoritar(index) {
-    document.getElementById(`coracao${index}`).classList.toggle("colored-heart");
-
-    const favRecipies = JSON.parse(localStorage.getItem("favRecipies") || "[]");
-    favRecipies.push(recipes[index]);
-
-    localStorage.setItem("favRecipies", JSON.stringify(favRecipies));
-    
-    if(favRecipies){
-        console.log(favRecipies)
-        favRecipies.filter((index) => index)
-    }
+function closeModal() {
+    modal.style.top = "-100%";
 }
 
 function showPopup(index) {
     popup.classList.remove('hidden');
+    console.log(recipes[index].nome);
 
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -109,4 +100,6 @@ function closePopup() {
     popup.classList.add('hidden');
 }
 
-getRecipe();
+
+
+getSavedRecipes();
