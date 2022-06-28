@@ -1,6 +1,3 @@
-/* Variaveis */
-//Variaveis de cadastro
-
 const newUserName = document.querySelector("#new-user-name");
 let validNewUserName = false;
 const newUserEmail = document.querySelector("#new-user-email");
@@ -13,9 +10,8 @@ const newUserConfirmPassword = document.querySelector(
 let validNewUserConfirmPassword = false;
 const errorMessage = document.querySelector("#error-message");
 
-/* Cadastro de usuario */
+const url = 'https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/users/';
 
-//Validação do nome
 
 newUserName.addEventListener("keyup", () => {
   if (newUserName.value.length <= 2) {
@@ -67,19 +63,45 @@ newUserConfirmPassword.addEventListener("keyup", () => {
   }
 });
 
+const sendHttpRequest = (method, url, data) => {
+  const promise = new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
+    xhr.open(method, url);
+  
+    xhr.responseType = 'json';
+    
+    if(data){
+      xhr.setRequestHeader('Content-type', 'application/json');
+    }
+
+    xhr.onload = () => {
+      resolve(xhr.response);
+    };
+  
+    xhr.send(JSON.stringify(data));
+  });
+
+  return promise;
+}
+
+
+const sendData = (name, email, password) => {
+  sendHttpRequest('POST', url, {
+    name,
+    email,
+    password,
+  })
+}
+
 function cadastro() {
   if (validNewUserName && validNewUserPassword && validNewUserConfirmPassword) {
-    //Salvando usuarios no localStorage
+    const user = {
+      "name": newUserName.value,
+      "email": newUserEmail.value,
+      "password": newUserPassword.value,
+    };
 
-    const userList = JSON.parse(localStorage.getItem("userList") || "[]");
-
-    userList.push({
-      user: newUserName.value,
-      email: newUserEmail.value,
-      password: newUserPassword.value,
-    });
-
-    localStorage.setItem("userList", JSON.stringify(userList));
+    sendData(user.name, user.email, user.password);
 
     alert("Usuário cadastrado");
     window.location.href = "telaDeLogin.html";

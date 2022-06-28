@@ -4,8 +4,12 @@ const loadercontainer = document.querySelector('.loader');
 const modalContent = document.querySelector('.modal-item')
 const searchBar = document.getElementById('searchBar');
 const popup = document.querySelector('.full-screen');
+const url = 'https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/users'
 
 let recipes = [];
+
+const userId = JSON.parse(localStorage.getItem("userLoggedId"));
+console.log(userId);
 
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
@@ -16,7 +20,7 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 const getRecipe = async () => {
-    const response = await fetch('http://localhost:3000/receitas');
+    const response = await fetch('https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/receitas');
     recipes = await response.json();
     displayRecipe(recipes);
 }
@@ -34,7 +38,7 @@ const displayRecipe = (recipes) => {
                         <ul>
                             <li><i class="fa-solid fa-house-chimney"></i>${tempo_de_preparo}</li>
                             <li><i class="fa-solid fa-user"></i>${porcoes}</li>
-                            <li onClick="favoritar(${index})"><i class="fa-solid fa-heart" id="coracao${index}"></i>Favorito</li>
+                            <li onClick="cadastrar(${index})"><i class="fa-solid fa-heart" id="coracao${index}"></i>Favorito</li>
                         </ul>
                     </div>
                     <div class="link">
@@ -47,19 +51,59 @@ const displayRecipe = (recipes) => {
     receitasContainer.innerHTML = recipeBox;
 }
 
-function favoritar(index) {
+const sendHttpRequest = (method, url, data) => {
+    const promise = new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+
+        xhr.responseType = 'json';
+
+        if (data) {
+            xhr.setRequestHeader('Content-type', 'application/json');
+        }
+
+        xhr.onload = () => {
+            resolve(xhr.response);
+        };
+
+        xhr.send(JSON.stringify(data));
+    });
+
+    return promise;
+}
+
+const cadastrar = (index) => {
     document.getElementById(`coracao${index}`).classList.toggle("colored-heart");
 
-    const favRecipies = JSON.parse(localStorage.getItem("favRecipies") || "[]");
-    favRecipies.push(recipes[index]);
+    const receita = recipes[index];
 
-    localStorage.setItem("favRecipies", JSON.stringify(favRecipies));
-    
-    if(favRecipies){
-        console.log(favRecipies)
-        favRecipies.filter((index) => index)
-    }
+    console.log(receita)
+
+    const receitaSalva = {
+        "id": receita.id,
+        "nome": receita.nome,
+        "resumo": receita.resumo,
+        "ingredientes": receita.ingredientes,
+        "modo_de_preparo": receita.modo_de_preparo,
+        "porcoes": receita.porcoes,
+        "tempo_de_preparo": receita.tempo_de_preparo,
+    };
+
+    sendData(receitaSalva.id, receitaSalva.nome, receitaSalva.resumo, receitaSalva.ingredientes, receitaSalva.modo_de_preparo, receitaSalva.porcoes, receitaSalva.tempo_de_preparo)
 }
+
+
+const sendData = ( id, nome, resumo, ingredientes, modo_de_preparo, porcoes, tempo_de_preparo ) => {
+    sendHttpRequest('POST', `${url}/${userId}/receitas_salvas`, {
+        id,
+        nome,
+        resumo,
+        ingredientes,
+        modo_de_preparo,
+        porcoes,
+        tempo_de_preparo,
+    })
+  }
 
 function showPopup(index) {
     popup.classList.remove('hidden');
