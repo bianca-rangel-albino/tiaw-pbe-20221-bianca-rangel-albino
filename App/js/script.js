@@ -9,7 +9,6 @@ const url = 'https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/users'
 let recipes = [];
 
 const userId = JSON.parse(localStorage.getItem("userLoggedId"));
-console.log(userId);
 
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
@@ -38,7 +37,7 @@ const displayRecipe = (recipes) => {
                         <ul>
                             <li><i class="fa-solid fa-house-chimney"></i>${tempo_de_preparo}</li>
                             <li><i class="fa-solid fa-user"></i>${porcoes}</li>
-                            <li onClick="cadastrar(${index})"><i class="fa-solid fa-heart" id="coracao${index}"></i>Favorito</li>
+                            <li onClick="cadastrar(${index})"><i class="fa-solid fa-heart" id="coracao${index}"></i>Favoritar</li>
                         </ul>
                     </div>
                     <div class="link">
@@ -73,11 +72,10 @@ const sendHttpRequest = (method, url, data) => {
 }
 
 const cadastrar = (index) => {
-    document.getElementById(`coracao${index}`).classList.toggle("colored-heart");
+    const coracao = document.getElementById(`coracao${index}`)
+    coracao.classList.toggle("colored-heart");
 
     const receita = recipes[index];
-
-    console.log(receita)
 
     const receitaSalva = {
         "id": receita.id,

@@ -4,8 +4,11 @@ const loadercontainer = document.querySelector('.loader');
 const modalContent = document.querySelector('.modal-item')
 const searchBar = document.getElementById('searchBar');
 const popup = document.querySelector('.full-screen');
+const url = 'https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/users'
 
 let recipes = [];
+
+const userId = JSON.parse(localStorage.getItem("userLoggedId"));
 
 searchBar.addEventListener('keyup', (e) => {
     const searchString = e.target.value.toLowerCase();
@@ -16,9 +19,9 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 const getSavedRecipes = async () => {
-    recipes = await fetch('https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/users/1/receitas_salvas');
+    const response = await fetch(`${url}/${userId}/receitas_salvas`);
+    recipes = await response.json();
     displayRecipe(recipes);
-    
 }
 
 
@@ -34,17 +37,45 @@ const displayRecipe = (recipes) => {
                         <ul>
                             <li><i class="fa-solid fa-house-chimney"></i>${tempo_de_preparo}</li>
                             <li><i class="fa-solid fa-user"></i>${porcoes}</li>
-                            <li onClick="favoritar(${index})"><i class="fa-solid fa-heart"></i>Favorito</li>
+                            <li onClick="desfavoritar(${index})"><i class="fa-solid fa-heart"></i>Favorito</li>
                         </ul>
                     </div>
                     <div class="link">
-                    <button class="openModal" onClick="showPopup(${index})">Mão na massa</button>
+                    <button class="openModal" onClick="showPopup(${index, recipes})">Mão na massa</button>
                     </div>
                 </div>
             </div>
             `
         }).join("")
     receitasContainer.innerHTML = recipeBox;
+}
+
+const sendHttpRequest = (method, url, data) => {
+    const promise = new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+
+        xhr.responseType = 'json';
+
+        if (data) {
+            xhr.setRequestHeader('Content-type', 'application/json');
+        }
+
+        xhr.onload = () => {
+            resolve(xhr.response);
+        };
+
+        xhr.send(JSON.stringify(data));
+    });
+
+    return promise;
+}
+
+const desfavoritar = (index, recipies) => {
+    sendHttpRequest('DELETE', `${url}/${userId}/receitas_salvas/${recipes[index].id}`);
+    setTimeout(() => {
+        location.reload();
+      }, "1000")
 }
 
 function closeModal() {
@@ -99,7 +130,5 @@ function showPopup(index) {
 function closePopup() {
     popup.classList.add('hidden');
 }
-
-
 
 getSavedRecipes();
