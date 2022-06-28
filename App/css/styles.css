@@ -41,6 +41,20 @@ a {
   color: var(--texto-link);
 }
 
+.footer {
+  position: 'absolute';
+  bottom: 0;
+  left: 0;
+  width: '100%';
+  height: 56;
+
+  display: 'flex';
+  justify-content: 'center';
+  align-items: 'center';
+
+  transition: 'all .3s ease',
+}
+
 /* Header */
 
 .navbar-brand {
@@ -195,7 +209,7 @@ a {
   border-radius: 10px;
 }
 
-#receitas-container{
+#receitas-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -205,7 +219,7 @@ a {
   padding-bottom: 100px;
 }
 
-.card-receita{
+.card-receita {
   display: flex;
   flex-direction: column;
   padding: 30px;
@@ -234,54 +248,8 @@ a {
   color: var(--texto-link);
 }
 
-.loader {
-  opacity: 0;
-  display: flex;
-  position: fixed;
-  bottom: 50px;
-  transition: opacity 0.3s ease-in;
-}
-
-.loader.show {
-  opacity: 1;
-}
-
-.circle {
-  background-color: #0e1220;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  margin: 5px;
-  animation: bounce 0.5s ease-in infinite;
-}
-
-.circle:nth-of-type(2) {
-  animation-delay: 0.1s;
-}
-
-.circle:nth-of-type(3) {
-  animation-delay: 0.2s;
-}
-
-.mostrarMais {
-  position: absolute;
-  border: none;
-  margin-top: 5px;
-  color: #333333;
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
 /*tela-sobre*/
-#sobre-container{
+#sobre-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -291,7 +259,7 @@ a {
   padding-bottom: 100px;
 }
 
-#title-sobre{
+#title-sobre {
   text-align: left;
   font-size: 4rem;
   width: 80vh;
@@ -299,7 +267,7 @@ a {
 }
 
 #card-sobre {
-  background-color:  #ffeace;
+  background-color: #ffeace;
   flex-direction: column;
   border-radius: 30px;
   padding: 110px;
@@ -307,10 +275,10 @@ a {
   text-align: center;
 }
 
-#texto-sobre { 
-	font-size: 20px;
-	padding: 20px 15px;
-  text-align:justify;
+#texto-sobre {
+  font-size: 20px;
+  padding: 20px 15px;
+  text-align: justify;
 }
 
 /*Modal*/
@@ -321,24 +289,33 @@ a {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
 }
 
 .flex-container-center {
   displaY: flex;
   flex-direction: column;
   justify-content: center;
-  align-items:center;
+  align-items: center;
 }
 
-.full-screen{
+.full-screen {
   color: white
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .colored-heart {
   color: red;
+}
+
+.content {
+  min-width: '100%';
+  position: 'relative';
+}
+
+.wrapper {
+  margin-bottom: '56px';
 }

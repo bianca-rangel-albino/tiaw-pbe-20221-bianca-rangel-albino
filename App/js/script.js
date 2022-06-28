@@ -41,7 +41,7 @@ const displayRecipe = (recipes) => {
                         </ul>
                     </div>
                     <div class="link">
-                    <button class="openModal" onClick="showPopup(${index})">Mão na massa</button>
+                    <button class="btn btn-secondary" onClick="showPopup(${index})">Mão na massa</button>
                     </div>
                 </div>
             </div>
