@@ -8,7 +8,7 @@ Os objetivos específicos que podemos ressaltar são:
 
 * Fornecer sugestões de receitas rápidas;
 * Listagem de receitas;
-* Permitir o compartilhamento de receitas;
+* Favoritar receitas;
 
 
 ## Alunos integrantes da equipe
