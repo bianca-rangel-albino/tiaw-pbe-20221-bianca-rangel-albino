@@ -158,9 +158,12 @@ function showPopup(index) {
                                 <img class="p-1 img-fluid" src=${recipes[index].imagem}>
                             </div>    
                         </div>
-                        <div class="mt-4">    
+                        <div class="mt-4 d-flex align-items-center justify-content-between">    
+                            <div>
                             <h4>Modo de preparo: </h4>
                             <p>${preparo()}</p>
+                            </div>
+                            <button onclick="closePopup()" class="btn btn-light ml-5">Dexia pra lá</button>
                         </div>
                     </div>
                 </div>

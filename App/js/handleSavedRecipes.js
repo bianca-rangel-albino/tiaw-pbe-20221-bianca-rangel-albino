@@ -126,6 +126,7 @@ function showPopup(index) {
                         <div class="mt-4">    
                             <h4>Modo de preparo: </h4>
                             <p>${preparo()}</p>
+                            <button onclick="closePopup()" class="btn btn-light">Dexia pra lá</button>
                         </div>
                     </div>
                 </div>
