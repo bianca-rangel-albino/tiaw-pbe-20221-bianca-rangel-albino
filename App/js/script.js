@@ -7,6 +7,7 @@ const popup = document.querySelector('.full-screen');
 const url = 'https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/users'
 
 let recipes = [];
+let indiceFavorito = [];
 
 const userId = JSON.parse(localStorage.getItem("userLoggedId"));
 
@@ -22,13 +23,16 @@ const getRecipe = async () => {
     const response = await fetch('https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/receitas');
     recipes = await response.json();
     displayRecipe(recipes);
+
+
 }
 
 
 const displayRecipe = (recipes) => {
     const recipeBox = recipes
-        .map(({ nome, resumo, tempo_de_preparo, porcoes }, index) => {
+    .map(({ nome, resumo, tempo_de_preparo, porcoes }, index) => {
             return `
+            <img class="d-none" src onerror='setColor()'>
             <div class="post">
                 <div class="card-receita">
                     <h3>${nome}</h3>
@@ -37,7 +41,7 @@ const displayRecipe = (recipes) => {
                         <ul>
                             <li><i class="fa-solid fa-house-chimney"></i>${tempo_de_preparo}</li>
                             <li><i class="fa-solid fa-user"></i>${porcoes}</li>
-                            <li onClick="cadastrar(${index})"><i class="fa-solid fa-heart" id="coracao${index}"></i>Favoritar</li>
+                            <li onClick="favoritar(${index})"><i class="fa-solid fa-heart" id="coracao${index}"></i>Favorito</li>
                         </ul>
                     </div>
                     <div class="link">
@@ -48,6 +52,14 @@ const displayRecipe = (recipes) => {
             `
         }).join("")
     receitasContainer.innerHTML = recipeBox;
+}
+
+const setColor = (index) => {
+    indiceFavorito = JSON.parse(localStorage.getItem("indiciesFavoritos") || "[]");
+
+    indiceFavorito.forEach(element => {
+        document.getElementById(`coracao${element}`).classList.toggle("colored-heart");
+    });
 }
 
 const sendHttpRequest = (method, url, data) => {
@@ -71,27 +83,35 @@ const sendHttpRequest = (method, url, data) => {
     return promise;
 }
 
-const cadastrar = (index) => {
-    const coracao = document.getElementById(`coracao${index}`)
-    coracao.classList.toggle("colored-heart");
-
+const favoritar = (index) => {
     const receita = recipes[index];
 
-    const receitaSalva = {
-        "id": receita.id,
-        "nome": receita.nome,
-        "resumo": receita.resumo,
-        "ingredientes": receita.ingredientes,
-        "modo_de_preparo": receita.modo_de_preparo,
-        "porcoes": receita.porcoes,
-        "tempo_de_preparo": receita.tempo_de_preparo,
-    };
+    console.log(receita.imagem)
 
-    sendData(receitaSalva.id, receitaSalva.nome, receitaSalva.resumo, receitaSalva.ingredientes, receitaSalva.modo_de_preparo, receitaSalva.porcoes, receitaSalva.tempo_de_preparo)
+    if(document.getElementById(`coracao${index}`).classList.contains('colored-heart')){
+        return null;
+    } else {
+        const receitaSalva = {
+            "id": receita.id,
+            "nome": receita.nome,
+            "resumo": receita.resumo,
+            "ingredientes": receita.ingredientes,
+            "modo_de_preparo": receita.modo_de_preparo,
+            "porcoes": receita.porcoes,
+            "tempo_de_preparo": receita.tempo_de_preparo,
+            "imagem": receita.imagem,
+        };
+    
+        sendData(receitaSalva.id, receitaSalva.nome, receitaSalva.resumo, receitaSalva.ingredientes, receitaSalva.modo_de_preparo, receitaSalva.porcoes, receitaSalva.tempo_de_preparo);
+        document.getElementById(`coracao${index}`).classList.toggle("colored-heart");
+        indiceFavorito.push(index);
+
+        localStorage.setItem("indiciesFavoritos", JSON.stringify(indiceFavorito));
+    }
 }
 
 
-const sendData = ( id, nome, resumo, ingredientes, modo_de_preparo, porcoes, tempo_de_preparo ) => {
+const sendData = ( id, nome, resumo, ingredientes, modo_de_preparo, porcoes, tempo_de_preparo, imagem ) => {
     sendHttpRequest('POST', `${url}/${userId}/receitas_salvas`, {
         id,
         nome,
@@ -100,6 +120,7 @@ const sendData = ( id, nome, resumo, ingredientes, modo_de_preparo, porcoes, tem
         modo_de_preparo,
         porcoes,
         tempo_de_preparo,
+        imagem
     })
   }
 

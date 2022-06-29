@@ -4,6 +4,6 @@ if (localStorage.getItem("token") == null) {
 }
 
 function logout() {
-  localStorage.removeItem("token");
-  window.location.href = "../index.html";
+  localStorage.clear();
+  window.location.href = "index.html";
 }

@@ -311,11 +311,21 @@ a {
   color: red;
 }
 
-.content {
-  min-width: '100%';
-  position: 'relative';
-}
 
-.wrapper {
-  margin-bottom: '56px';
-}
+@media (min-width: 0px) and (max-width:1023px) {
+  html {
+   font-size: 0.8rem;
+  }
+ }
+ 
+ @media (min-width:1024px) and (max-width:1279px) {
+  html {
+   font-size: 1.125rem;
+  }
+ }
+
+ @media (min-width:1280px) {
+  html {
+   font-size: 1.1875rem;
+  }
+ }
