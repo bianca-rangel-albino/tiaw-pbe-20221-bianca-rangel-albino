@@ -7,6 +7,7 @@ const popup = document.querySelector('.full-screen');
 const url = 'https://62b8c2b9f4cb8d63df624474.mockapi.io/api/v1/users'
 
 let recipes = [];
+let indiceFavorito = [];
 
 const userId = JSON.parse(localStorage.getItem("userLoggedId"));
 
@@ -37,11 +38,11 @@ const displayRecipe = (recipes) => {
                         <ul>
                             <li><i class="fa-solid fa-house-chimney"></i>${tempo_de_preparo}</li>
                             <li><i class="fa-solid fa-user"></i>${porcoes}</li>
-                            <li onClick="desfavoritar(${index})"><i class="fa-solid fa-heart"></i>Favorito</li>
+                            <li onClick="desfavoritar(${index})"><i class="fa-solid fa-heart colored-heart"></i>Favorito</li>
                         </ul>
                     </div>
                     <div class="link">
-                    <button class="openModal" class="btn btn-light" onClick="showPopup(${index, recipes})">Mão na massa</button>
+                    <button class="btn btn-secondary" onClick="showPopup(${index})">Mão na massa</button>
                     </div>
                 </div>
             </div>
@@ -73,9 +74,14 @@ const sendHttpRequest = (method, url, data) => {
 
 const desfavoritar = (index, recipies) => {
     sendHttpRequest('DELETE', `${url}/${userId}/receitas_salvas/${recipes[index].id}`);
+    
+    localStorage.removeItem("indiciesFavoritos");
+
+    
+
     setTimeout(() => {
         location.reload();
-      }, "1000")
+    }, "1000")
 }
 
 function closeModal() {
@@ -84,7 +90,7 @@ function closeModal() {
 
 function showPopup(index) {
     popup.classList.remove('hidden');
-    console.log(recipes[index].nome);
+    console.log(recipes[index].imagem);
 
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
