@@ -143,12 +143,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-001| O site deve apresentar na página principal receitas. | ALTA |
 |RF-002| O site deve permitir ao usuário visualizar a receita completa com todos os ingredientes, modo de preparo, tempo de cozimento e porções que rende. |ALTA
-|RF-003| O site deve oferecer uma funcionalidade de filtro para permitir ao usuário localizar a receita que queira cozinhar.|BAIXA|
+|RF-003|O site deve oferecer uma funcionalidade de pesquisa para permitir ao usuário localizar a receita que queira cozinhar.|ALTA|
 |RF-004| O site deve apresentar, um vídeo ou imagem equivalente à receita. | MÉDIA |
 |RF-005| O site deve permitir verificar as receitas salvas como preferidas. | MÉDIA |
-|RF-006| O site deve permitir o compartilhamento das receitas que mais gostou. | BAIXA|
+|RF-006| O site deve ser acessado por meio de uma página de login. no qual o usuário logado terá acesso a todas as funcionalidades do site  |MÉDIA|
 |RF-007| O site deve permitir favoritar e salvar as receitas.| MÉDIA |
-|RF-008| O site deve permitir visualizar as informações de contatos da equipe que faz a manutenção do site.| BAIXA|
+|RF-008| O site deve permitir visualizar uma tela com as informações da equipe e suas razões de ter criado a página.| BAIXA|
 |RF-009| O site deve permitir comentários em relação a receita |BAIXA|
 |RF-010|  O site deve permitir fazer um check-in dos ingredientes e passo-a-passO | MÉDIA|
 
