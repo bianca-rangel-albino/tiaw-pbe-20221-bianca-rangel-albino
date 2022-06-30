@@ -39,7 +39,7 @@ const displayRecipe = (recipes) => {
                     <div class="box-receita">
                         <p>${resumo}</p>
                         <ul>
-                            <li><i class="fa-solid fa-house-chimney"></i>${tempo_de_preparo}</li>
+                            <li><i class="fa-solid fa-clock"></i>${tempo_de_preparo}</li>
                             <li><i class="fa-solid fa-user"></i>${porcoes}</li>
                             <li onClick="favoritar(${index})"><i class="fa-solid fa-heart" id="coracao${index}"></i>Favorito</li>
                         </ul>
