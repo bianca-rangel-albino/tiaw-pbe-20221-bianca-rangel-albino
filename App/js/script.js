@@ -163,7 +163,7 @@ function showPopup(index) {
                             <h4>Modo de preparo: </h4>
                             <p>${preparo()}</p>
                             </div>
-                            <button onclick="closePopup()" class="btn btn-light ml-5">Dexia pra lá</button>
+                            <button onclick="closePopup()" class="btn btn-light ml-5">Deixa pra lá</button>
                         </div>
                     </div>
                 </div>
